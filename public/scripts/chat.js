@@ -6,7 +6,6 @@ class Chatroom {
     this.unsub;
   }
   async addChat(message){
-    // format a chat object
     const now = new Date();
     const chat = {
       message: message,
@@ -14,13 +13,12 @@ class Chatroom {
       room: this.room,
       created_at: firebase.firestore.Timestamp.fromDate(now)
     };
-    console.log('chat=====', chat)
-    // save the chat document
+    
     const response = await this.chats.add(chat);
     return response;
   }
   getChats(callback){
-    console.log(this.chats)
+
     this.unsub = this.chats
       .where('room', '==', this.room)
       .orderBy('created_at')
@@ -38,7 +36,7 @@ class Chatroom {
   }
   updateRoom(room){
     this.room = room;
-    console.log('room updated');
+    
     if(this.unsub){
       this.unsub();
     }

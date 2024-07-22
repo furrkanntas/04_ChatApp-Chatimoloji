@@ -23,12 +23,12 @@
           <div class="chat-rooms flex flex-col justify-center items-center">
             <div class="my-2 font-semibold text-xl">Choose a chatroom:</div>
             <div class="flex justify-center items-center gap-4">
-              <button class="border-2 border-green-700 w-24 py-1 text-center rounded-2xl" id="general">#general</button>
-              <button class="border-2 border-green-700 w-24 py-1 text-center rounded-2xl" id="gaming">#gaming</button>
-              <button class="border-2 border-green-700 w-24 py-1 text-center rounded-2xl" id="music">#music</button>
-              <button class="border-2 border-green-700 w-24 py-1 text-center rounded-2xl" id="ninjas">#ninjas</button>
+              <button class="btnGreen" id="general">#general</button>
+              <button class="btnBlue" id="gaming">#gaming</button>
+              <button class="btnOrange" id="music">#music</button>
+              <button class="btnPurple" id="ninjas">#ninjas</button>
             </div>
-            <div class="bg-yellow-500 w-[95%] h-[2px] mt-2"></div>
+            <div class="bg-yellow-500 w-[95%] h-[2px] mt-3"></div>
           </div>
           <section class="flex flex-col justify-center items-center mt-3">
             <form class="new-chat">
@@ -46,7 +46,7 @@
                 </div>
                 <div class="input-group-append">
                   <input type="submit"
-                    class="border-2 border-orange-700 rounded-e-3xl p-1 w-20 bg-green-200/20 cursor-pointer"
+                    class="border-2 border-orange-700 rounded-e-3xl p-1 w-20 bg-red-200/30 hover:bg-red-500/30 shadow-md font-semibold hover:font-bold cursor-pointer"
                     value="send">
                 </div>
               </div>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="input-group-append">
                   <input type="submit"
-                    class="btn border-2 border-orange-700 rounded-e-3xl p-1 w-20 bg-green-200/20 cursor-pointer"
+                    class="btn border-2 border-orange-700 rounded-e-3xl p-1 w-20 bg-red-200/30 hover:bg-red-500/30 shadow-md font-semibold hover:font-bold cursor-pointer"
                     value="update">
                 </div>
               </div>
@@ -75,7 +75,10 @@
           </section>
         </div>
         <div class="col-span-8">
-          <ul class="chat-list list-group"></ul>
+          <div
+            class="textTopic flex justify-center bg-white/30 p-2 rounded-full border-b-4 border-green-300 shadow-md font-semibold text-xl">
+            #general</div>
+          <ul class="chat-list"></ul>
         </div>
       </section>
     </div>

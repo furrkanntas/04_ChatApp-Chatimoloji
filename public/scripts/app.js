@@ -27,6 +27,24 @@ newNameForm.addEventListener('submit', e => {
 
 rooms.addEventListener('click', e => {
   if(e.target.tagName === 'BUTTON'){
+
+    const buttonText = e.target.textContent;
+    const textTopicDiv = document.querySelector('.textTopic');
+    textTopicDiv.textContent = buttonText;
+
+    textTopicDiv.classList.remove('border-green-300', 'border-blue-300', 'border-orange-300', 'border-purple-300');
+
+    const buttonId = e.target.getAttribute('id');
+    if (buttonId === 'general') {
+      textTopicDiv.classList.add('border-green-300');
+    } else if (buttonId === 'gaming') {
+      textTopicDiv.classList.add('border-blue-300');
+    } else if (buttonId === 'music') {
+      textTopicDiv.classList.add('border-orange-300');
+    } else if (buttonId === 'ninjas') {
+      textTopicDiv.classList.add('border-purple-300');
+    }
+
     chatUI.clear();
     chatroom.updateRoom(e.target.getAttribute('id'));
     chatroom.getChats(chat => chatUI.render(chat));
@@ -36,6 +54,6 @@ rooms.addEventListener('click', e => {
 const username = localStorage.username ? localStorage.username : 'anon';
 
 const chatUI = new ChatUI(chatList);
-const chatroom = new Chatroom('gaming', username);
+const chatroom = new Chatroom('general', username);
 
 chatroom.getChats(data => chatUI.render(data));
