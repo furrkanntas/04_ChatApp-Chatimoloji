@@ -24,9 +24,9 @@
             <div class="my-2 font-semibold text-xl">Choose a chatroom:</div>
             <div class="flex justify-center items-center gap-4">
               <button class="btnGreen" id="general">#general</button>
-              <button class="btnBlue" id="gaming">#gaming</button>
+              <button class="btnBlue" id="films">#films</button>
               <button class="btnOrange" id="music">#music</button>
-              <button class="btnPurple" id="ninjas">#ninjas</button>
+              <button class="btnPurple" id="books">#books</button>
             </div>
             <div class="bg-yellow-500 w-[95%] h-[2px] mt-3"></div>
           </div>
@@ -51,7 +51,7 @@
                 </div>
               </div>
             </form>
-            <form class="new-name">
+            <form class="new-name flex flex-col justify-center items-center">
               <div class="flex items-center gap-1">
                 <div class="border-2 border-orange-700 rounded-s-3xl p-1 w-32 text-center bg-blue-700/20">
                   Update name:
@@ -70,7 +70,16 @@
                     value="update">
                 </div>
               </div>
-              <div class="update-mssg"></div>
+              <div class="bg-white/30 p-1 pl-2 pr-2 rounded-full text-center mt-4 shadow-lg border-[1px] border-green-600">
+                <i class="fa-solid fa-star text-orange-400"></i> Your current name is <span
+                  class="font-bold text-green-600 currentName"></span> <i
+                  class="fa-regular fa-face-smile-wink text-blue-600"></i>
+              </div>
+              <div class="updatedName hidden bg-white/30 p-1 rounded-full text-center mt-4 shadow-lg border-[1px] border-purple-600">
+                <i class="fa-solid fa-star text-orange-400"></i> Your name was updated to <span
+                  class="font-bold text-green-600 update-mssg">Furkaney</span> <i
+                  class="fa-regular fa-face-smile-wink text-blue-600"></i>
+              </div>
             </form>
           </section>
         </div>

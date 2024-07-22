@@ -3,6 +3,7 @@ const newChatForm = document.querySelector('.new-chat');
 const newNameForm = document.querySelector('.new-name');
 const updateMssg = document.querySelector('.update-mssg');
 const rooms = document.querySelector('.chat-rooms');
+const currentNames = document.querySelector('.currentName');
 
 newChatForm.addEventListener('submit', e => {
   e.preventDefault();
@@ -20,10 +21,18 @@ newNameForm.addEventListener('submit', e => {
  
   newNameForm.reset();
  
-  updateMssg.innerText = `Your name was updated to ${newName}`;
-  setTimeout(() => updateMssg.innerText = '', 3000);
-});
+  const updatedNameDiv = document.querySelector('.updatedName');
+  
+  updateMssg.innerText = `${newName}`;
+  currentNames.innerText = newName;
+  
 
+  updatedNameDiv.classList.remove('hidden');
+  setTimeout(() => {
+    updatedNameDiv.classList.add('hidden');
+    updateMssg.innerText = '';
+  }, 3000);
+});
 
 rooms.addEventListener('click', e => {
   if(e.target.tagName === 'BUTTON'){
@@ -37,11 +46,11 @@ rooms.addEventListener('click', e => {
     const buttonId = e.target.getAttribute('id');
     if (buttonId === 'general') {
       textTopicDiv.classList.add('border-green-300');
-    } else if (buttonId === 'gaming') {
+    } else if (buttonId === 'films') {
       textTopicDiv.classList.add('border-blue-300');
     } else if (buttonId === 'music') {
       textTopicDiv.classList.add('border-orange-300');
-    } else if (buttonId === 'ninjas') {
+    } else if (buttonId === 'books') {
       textTopicDiv.classList.add('border-purple-300');
     }
 
@@ -52,6 +61,7 @@ rooms.addEventListener('click', e => {
 });
 
 const username = localStorage.username ? localStorage.username : 'anon';
+currentNames.innerText = username;
 
 const chatUI = new ChatUI(chatList);
 const chatroom = new Chatroom('general', username);
