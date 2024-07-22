@@ -18,22 +18,26 @@
   <main class="w-full h-screen mx-auto">
     <h1 class="my-4 text-center text-4xl font-bold mt-20">Chatimoloji</h1>
     <div class="max-w-[80%] h-full mx-auto">
-      <section class="grid grid-cols-12 gap-10">
-        <div class="col-span-4 flex flex-col">
+      <section class="grid xl:grid-cols-12 gap-4 xl:gap-28 2xl:gap-10">
+        <div class="xl:col-span-4 flex flex-col">
           <div class="chat-rooms flex flex-col justify-center items-center">
             <div class="my-2 font-semibold text-xl">Choose a chatroom:</div>
-            <div class="flex justify-center items-center gap-4">
-              <button class="btnGreen" id="general">#general</button>
-              <button class="btnBlue" id="films">#films</button>
-              <button class="btnOrange" id="music">#music</button>
-              <button class="btnPurple" id="books">#books</button>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <div class="flex justify-center items-center gap-4">
+                <button class="btnGreen" id="general">#general</button>
+                <button class="btnBlue" id="films">#films</button>
+              </div>
+              <div class="flex justify-center items-center gap-4">
+                <button class="btnOrange" id="music">#music</button>
+                <button class="btnPurple" id="books">#books</button>
+              </div>
             </div>
             <div class="bg-yellow-500 w-[95%] h-[2px] mt-3"></div>
           </div>
           <section class="flex flex-col justify-center items-center mt-3">
             <form class="new-chat">
-              <div class="flex items-center gap-1">
-                <div class="border-2 border-orange-700 rounded-s-3xl p-1 w-32 text-center bg-blue-700/20">
+              <div class="flex flex-col sm:flex-row items-center gap-1">
+                <div class="border-2 border-orange-700 rounded-s-3xl p-1 w-32 text-center mr-auto bg-blue-700/20">
                   Your message:
                 </div>
                 <div class="relative">
@@ -52,8 +56,8 @@
               </div>
             </form>
             <form class="new-name flex flex-col justify-center items-center">
-              <div class="flex items-center gap-1">
-                <div class="border-2 border-orange-700 rounded-s-3xl p-1 w-32 text-center bg-blue-700/20">
+              <div class="flex flex-col sm:flex-row items-center gap-1">
+                <div class="border-2 border-orange-700 rounded-s-3xl p-1 w-32 text-center mr-auto bg-blue-700/20">
                   Update name:
                 </div>
                 <div class="relative">
@@ -70,24 +74,28 @@
                     value="update">
                 </div>
               </div>
-              <div class="bg-white/30 p-1 pl-2 pr-2 rounded-full text-center mt-4 shadow-lg border-[1px] border-green-600">
+              <div
+                class="bg-white/30 p-1 pl-2 pr-2 rounded-full text-center mt-4 shadow-lg border-[1px] border-green-600">
                 <i class="fa-solid fa-star text-orange-400"></i> Your current name is <span
                   class="font-bold text-green-600 currentName"></span> <i
                   class="fa-regular fa-face-smile-wink text-blue-600"></i>
               </div>
-              <div class="updatedName hidden bg-white/30 p-1 rounded-full text-center mt-4 shadow-lg border-[1px] border-purple-600">
-                <i class="fa-solid fa-star text-orange-400"></i> Your name was updated to <span
+              <div
+                class="updatedName hidden bg-white/30 p-1 pl-2 pr-2 rounded-full text-center mt-4 shadow-lg border-[1px] border-purple-600">
+                <i class="fa-solid fa-exclamation text-orange-400 pl-1"></i> <i
+                  class="fa-solid fa-exclamation text-orange-400"></i> <i
+                  class="fa-solid fa-exclamation text-orange-400"></i> Your name was updated to <span
                   class="font-bold text-green-600 update-mssg">Furkaney</span> <i
                   class="fa-regular fa-face-smile-wink text-blue-600"></i>
               </div>
             </form>
           </section>
         </div>
-        <div class="col-span-8">
+        <div class="xl:col-span-8">
           <div
             class="textTopic flex justify-center bg-white/30 p-2 rounded-full border-b-4 border-green-300 shadow-md font-semibold text-xl">
             #general</div>
-          <ul class="chat-list"></ul>
+          <ul class="chat-list mb-52"></ul>
         </div>
       </section>
     </div>
@@ -107,7 +115,6 @@
     };
     firebase.initializeApp(config);
     const db = firebase.firestore();
-    console.log(db);
   </script>
   <script src="scripts/chat.js"></script>
   <script src="scripts/ui.js"></script>
