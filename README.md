@@ -1,5 +1,9 @@
 # Chatimoloji
 
+🟩 **Live Demo:** <a href="https://furrkanntas.github.io/04_ChatApp-Chatimoloji/" target="_blank" rel="noopener noreferrer">Chatimoloji - Live Link</a>
+
+🟨 **Other Projects:** <a href="https://furrkanntas.github.io/01_FT-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Explore My Projects</a>
+
 **Chatimoloji** is a simple chat application that allows users to join various chat rooms and chat in real-time. The application uses Firebase to store data and update it dynamically.
 
 ![Chat Messages Screenshot](public/img/chatimoloji.gif)
@@ -96,4 +100,8 @@ Thank you for exploring the Chatimoloji chat application! We hope this tool enha
 Happy chatting!
 
 Best regards,  
-Furkan Taş
+**Furkan Taş**
+
+🟩 **Live Demo:** <a href="https://furrkanntas.github.io/04_ChatApp-Chatimoloji/" target="_blank" rel="noopener noreferrer">Chatimoloji - Live Link</a>
+
+🟨 **Other Projects:** <a href="https://furrkanntas.github.io/01_FT-Portfolio/index.html" target="_blank" rel="noopener noreferrer">Explore My Projects</a>
